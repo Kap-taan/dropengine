@@ -16,12 +16,12 @@ Ensure you have Docker installed on your system. Follow the instructions for you
 
 To get started, run the following commands:
 
-### After running the below command, configure the .env as per your system
+##### After running the below command, configure the .env as per your system
 
 ```zsh
 cp .env.example .env
 ```
-### This command will spin up a docker container
+##### This command will spin up a docker container
 
 ```zsh
 docker compose up
