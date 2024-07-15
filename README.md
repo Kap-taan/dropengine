@@ -14,7 +14,12 @@ Ensure you have Docker installed on your system. Follow the instructions for you
 
 ## Initial Commands
 
-To get started, run the following command:
+To get started, run the following commands:
+
+```zsh
+cp .env.example .env
+```
+Configure the .env as per your requirement
 
 ```zsh
 docker compose up
