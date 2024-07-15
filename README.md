@@ -19,7 +19,6 @@ To get started, run the following commands:
 ```zsh
 cp .env.example .env
 ```
-- Configure the .env as per your requirement
 
 ```zsh
 docker compose up
