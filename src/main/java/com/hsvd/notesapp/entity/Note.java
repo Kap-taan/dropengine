@@ -41,7 +41,7 @@ public class Note {
     private String description;
 
 
-    @ManyToOne(optional = true)
+    @ManyToOne(optional = false)
     @JoinColumn(name = "user_id", referencedColumnName = "id")
     private User author;
 

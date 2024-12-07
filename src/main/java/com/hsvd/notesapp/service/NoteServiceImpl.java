@@ -26,12 +26,18 @@ public class NoteServiceImpl implements NoteService {
     }
 
     @Override
-    public void createNote(Note note, Long userId) {
-        User user = userService.findUserById(userId);
+    public void createNote(Note note, String username) {
+        User user = userService.findUserByUsername(username);
         note.setAuthor(user);
         note.setLikes(0L);
         note.setCreatedAt(new Date());
         noteRepository.save(note);
+    }
+
+    @Override
+    public List<Note> getNotesForUsername(String username) {
+        User user = userService.findUserByUsername(username);
+        return (List<Note>) noteRepository.findAllByAuthor(user);
     }
 
     

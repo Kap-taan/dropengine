@@ -7,6 +7,7 @@ import com.hsvd.notesapp.entity.Note;
 public interface NoteService {
     
     List<Note> getAllNotes();
-    void createNote(Note note, Long userId);
+    void createNote(Note note, String username);
+    List<Note> getNotesForUsername(String username);
 
 }

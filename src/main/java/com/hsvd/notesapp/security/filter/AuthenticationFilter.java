@@ -19,7 +19,6 @@ import com.auth0.jwt.algorithms.Algorithm;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.hsvd.notesapp.entity.User;
 import com.hsvd.notesapp.security.SecurityConstants;
-import com.hsvd.notesapp.security.manager.CustomAuthenticationManager;
 
 import lombok.AllArgsConstructor;
 
