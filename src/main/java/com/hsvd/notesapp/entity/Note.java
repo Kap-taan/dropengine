@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+import javax.validation.constraints.NotBlank;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -35,9 +36,12 @@ public class Note {
     private Long id;
 
     @Column(name = "title", nullable = false)
+    @NotBlank(message =  "Title cannot be empty")
+    
     private String title;
 
     @Column(name = "description", nullable = false)
+    @NotBlank(message =  "Description cannot be empty")
     private String description;
 
 
@@ -46,6 +50,7 @@ public class Note {
     private User author;
 
     @Column(name = "status", nullable = false)
+    @NotBlank(message =  "Status cannot be empty")
     private Status status;
 
     @Column(name = "likes", nullable = false)
