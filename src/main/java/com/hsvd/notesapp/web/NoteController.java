@@ -2,6 +2,8 @@ package com.hsvd.notesapp.web;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.http.HttpStatus;
@@ -29,7 +31,7 @@ public class NoteController {
     }
 
     @PostMapping("/createnote")
-    public ResponseEntity<HttpStatus> createNote(@RequestBody Note note) {
+    public ResponseEntity<HttpStatus> createNote(@Valid @RequestBody Note note) {
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         String username = authentication.getPrincipal().toString();
         noteService.createNote(note, username);

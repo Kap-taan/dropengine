@@ -1,5 +1,7 @@
 package com.hsvd.notesapp.web;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,7 +19,7 @@ public class UserController {
     private UserService userService;
     
     @PostMapping("/register")
-    public ResponseEntity<HttpStatus> createUser(@RequestBody User user) {
+    public ResponseEntity<HttpStatus> createUser(@Valid @RequestBody User user) {
         userService.createUser(user);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
