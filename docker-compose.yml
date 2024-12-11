@@ -1,0 +1,9 @@
+services:
+  db:
+    image: mysql
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=12345@cse
+      - MYSQL_DATABASE=notesapp
+    ports:
+      - 3306:3306
