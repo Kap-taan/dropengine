@@ -11,6 +11,7 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -50,7 +51,6 @@ public class Note {
     private User author;
 
     @Column(name = "status", nullable = false)
-    @NotBlank(message =  "Status cannot be empty")
     private Status status;
 
     @Column(name = "likes", nullable = false)
