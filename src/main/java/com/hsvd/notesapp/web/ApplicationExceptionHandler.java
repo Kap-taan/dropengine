@@ -1,6 +1,5 @@
 package com.hsvd.notesapp.web;
 
-import java.net.http.HttpRequest;
 import java.util.Arrays;
 import java.util.stream.Collectors;
 
