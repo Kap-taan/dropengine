@@ -6,4 +6,4 @@ services:
       - MYSQL_ROOT_PASSWORD=12345@cse
       - MYSQL_DATABASE=notesapp
     ports:
-      - 3306:3306
+      - 3307:3306
